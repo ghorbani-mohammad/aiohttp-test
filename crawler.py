@@ -1,20 +1,15 @@
 import asyncio
-from timeit import default_timer
 from aiohttp import ClientSession
 
 
 def fetch_async(urls):
-    start_time = default_timer()
     loop = asyncio.get_event_loop()
     future = asyncio.ensure_future(fetch_all(urls))
     loop.run_until_complete(future)
-    tot_elapsed = default_timer() - start_time
-    print("Total time taken : " + str(tot_elapsed))
 
 
 async def fetch_all(urls):
     tasks = []
-    fetch.start_time = dict()
     async with ClientSession() as session:
         for url in urls:
             task = asyncio.ensure_future(fetch(url, session))
@@ -23,12 +18,8 @@ async def fetch_all(urls):
 
 
 async def fetch(url, session):
-    fetch.start_time[url] = default_timer()
     async with session.get(url) as response:
-        r = await response.read()
-        elapsed = default_timer() - fetch.start_time[url]
-        print(url + " took " + str(elapsed))
-        return r
+        return await response.read()
 
 
 if __name__ == "__main__":
