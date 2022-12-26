@@ -24,10 +24,10 @@ async def fetch(url, session):
 
 if __name__ == "__main__":
     urls = [
-        "https://nytimes.com",
         "https://github.com",
         "https://google.com",
         "https://reddit.com",
+        "https://nytimes.com",
         "https://producthunt.com",
     ]
     fetch_async(urls)
