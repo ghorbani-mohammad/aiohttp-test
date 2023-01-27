@@ -1,6 +1,7 @@
 import asyncio
 import aiohttp
 
+
 class WebScraper(object):
     def __init__(self, urls):
         self.urls = urls
