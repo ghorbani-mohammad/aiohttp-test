@@ -2,4 +2,8 @@
 
 Concurrently fetch data from multiple websites.
 
-*test-4 is related to test-3*
+#### List of patterns:
+- test-1:
+- test-2:
+- test-3:
+- test-4:
