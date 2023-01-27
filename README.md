@@ -1,8 +1,8 @@
-### Having fun with aiohttp package
+### Learning aiohttp by a bunch of examples
 
 Concurrently fetch data from multiple websites.
 
-#### List of patterns:
+#### List of contents:
 - test-1:
 - test-2:
 - test-3:
