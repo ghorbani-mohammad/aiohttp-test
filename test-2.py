@@ -1,6 +1,5 @@
 import time
 import asyncio
-
 import aiohttp
 
 async def by_aiohttp(total: int):
@@ -13,10 +12,10 @@ async def by_aiohttp(total: int):
             
     start_time = time.time()
     asyncio.run(by_aiohttp(total))
-    print("--- It took %s seconds ---" % (time.time() - start_time))
+    print(f"--- It took {time.time() - start_time} seconds ---")
     
 if __name__ == "__main__":
     total = 10
     start_time = time.time()
     asyncio.run(by_aiohttp(total))
-    print("--- It took %s seconds ---" % (time.time() - start_time))
+    print(f"--- It took {time.time() - start_time} seconds ---")
